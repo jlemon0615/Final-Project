@@ -94,6 +94,7 @@ class Avatar:
            if mousePt is not None:
                if btn.getP1().getX() < mousePt.getX() < btn.getP2().getX():
                    if btn.getP1().getY() < mousePt.getY() < btn.getP2().getY():
+                       #Takes variables and assigns them values from input given to the user
                        self.name=user1.getText()
                        self.hometown=user2.getText()
                        self.age=user3.getText()
@@ -108,7 +109,7 @@ class Avatar:
                            self.generation = ("am")
                        else:
                            self.generation= ("am not")
-                       #Make white rectangle
+                       #Make white rectangle to move onto next screen for the bio
                        win= GraphWin ("Avatar Program", 600, 500) 
                        r = Rectangle ( Point (550, 450), Point (50,50))
                        r.setFill("white")
@@ -129,4 +130,4 @@ def main():
     newA= Avatar()
     newA.bio()
    
-main()    
+    
